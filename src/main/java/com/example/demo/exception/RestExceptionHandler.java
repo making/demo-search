@@ -62,7 +62,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 	@Override
 	protected ResponseEntity<Object> handleTypeMismatch(TypeMismatchException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
-		String message = String.format("The give request (%s=%s) is not valid.",
+		String message = String.format("The given request (%s=%s) is not valid.",
 				ex.getPropertyName(), ex.getValue());
 		return handleExceptionInternal(ex, new SimpleExceptionMessage(message), headers,
 				status, request);
