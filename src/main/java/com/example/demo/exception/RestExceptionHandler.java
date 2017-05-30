@@ -76,7 +76,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 	}
 
 	@ExceptionHandler(RuntimeException.class)
-	ResponseEntity<Object> handleRuntimeException(RuntimeException e, HttpHeaders headers,
+	ResponseEntity<Object> handleRuntimeException(RuntimeException e,
 			WebRequest request) {
 		log.error("Unexpected Exception", e);
 		return this.handleExceptionInternal(e,
