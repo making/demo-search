@@ -80,7 +80,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 			WebRequest request) {
 		log.error("Unexpected Exception", e);
 		return this.handleExceptionInternal(e,
-				new SimpleExceptionMessage("Unexpected Exception"), headers,
+				new SimpleExceptionMessage("Unexpected Exception"), null,
 				HttpStatus.INTERNAL_SERVER_ERROR, request);
 	}
 }
